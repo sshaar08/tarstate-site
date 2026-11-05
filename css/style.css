@@ -5,13 +5,15 @@
 }
 
 :root {
-  --primary: #f97316;
-  --primary-dark: #ea580c;
-  --bg: #111213;
-  --bg-light: #1c1e21;
-  --text: #f4f4f5;
-  --text-muted: #a1a1aa;
-  --accent: #fbbf24;
+  --primary: #4b9cd3;        /* Carolina blue */
+  --primary-dark: #3a7ca5;
+  --accent: #7bafd4;         /* lighter Carolina blue */
+  --bg: #ffffff;             /* white */
+  --bg-tint: #e8f3fb;        /* subtle Carolina tint */
+  --bg-tint-2: #f4f9fd;      /* very light tint */
+  --text: #152634;           /* deep navy */
+  --text-muted: #5b6b78;
+  --border: #d5e6f3;
 }
 
 body {
@@ -32,7 +34,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle at 50% 0%, #2a1a0a 0%, var(--bg) 60%);
+  background: linear-gradient(160deg, #ffffff 0%, var(--bg-tint) 100%);
 }
 
 nav {
@@ -105,16 +107,18 @@ nav {
   display: inline-block;
   padding: 1rem 2.5rem;
   background: var(--primary);
-  color: #111;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 700;
-  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 6px 18px rgba(75, 156, 211, 0.35);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .cta:hover {
-  background: var(--accent);
+  background: var(--primary-dark);
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(75, 156, 211, 0.45);
 }
 
 /* Sections */
@@ -126,10 +130,11 @@ section h2 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
+  color: var(--text);
 }
 
 .services {
-  background: var(--bg-light);
+  background: var(--bg-tint-2);
 }
 
 .service-grid {
@@ -142,13 +147,15 @@ section h2 {
   background: var(--bg);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.3s, border-color 0.3s;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(21, 38, 52, 0.04);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(75, 156, 211, 0.18);
 }
 
 .service-card h3 {
@@ -170,7 +177,7 @@ section h2 {
 }
 
 .contact {
-  background: var(--bg-light);
+  background: var(--bg-tint);
   text-align: center;
 }
 
@@ -193,13 +200,14 @@ section h2 {
   padding: 0.75rem 1.5rem;
   background: var(--bg);
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: border-color 0.3s, color 0.3s;
+  border: 1px solid var(--border);
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .contact-link:hover {
   border-color: var(--primary);
   color: var(--primary);
+  box-shadow: 0 6px 16px rgba(75, 156, 211, 0.2);
 }
 
 .service-area {
@@ -212,6 +220,7 @@ footer {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.875rem;
+  background: var(--bg-tint-2);
 }
 
 /* Mobile */
