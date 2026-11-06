@@ -14,7 +14,7 @@
   --text: #152634;           /* deep navy */
   --text-muted: #5b6b78;
   --border: #d5e6f3;
-  --logo-opacity: 0.08;      /* page background logo strength (0 = hidden, 1 = full) */
+  --logo-opacity: 0.4;       /* page background logo strength (0 = hidden, 1 = full) */
 }
 
 html {
